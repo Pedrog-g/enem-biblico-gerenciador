@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participantes | ENEM Bíblico</title>
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-[url(./images/bg-enem-biblico.png)] bg-cover p-6">
+
+<div class="absolute inset-0 bg-black/50"></div>
+
+<div class="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl p-8">
+
+  <!-- HEADER -->
+  <div class="text-center mb-8 flex justify-center flex-col">
+    <img src="src/images/logo-enem-biblico.png" class="w-60 mx-auto mb-4">
+    <h1 class="text-3xl font-black text-slate-800">
+      Painel de Participantes
+    </h1>
+    <p class="text-slate-500 text-sm">
+      ENEM Bíblico 2026
+    </p>
+  </div>
+
+  <!-- TABS -->
+  <div class="flex justify-center gap-3 mb-6">
+   <div class="flex gap-3 mb-4 justify-center">
+
+  <button data-level="1"
+    class="tab-btn px-4 py-2 rounded-lg font-semibold transition"
+    onclick="showLevel(1, this)">
+    Nível 1
+  </button>
+
+  <button data-level="2"
+    class="tab-btn px-4 py-2 rounded-lg font-semibold transition"
+    onclick="showLevel(2, this)">
+    Nível 2
+  </button>
+
+  <button data-level="3"
+    class="tab-btn px-4 py-2 rounded-lg font-semibold transition"
+    onclick="showLevel(3, this)">
+    Nível 3
+  </button>
+
+</div>
+
+  </div>
+
+  <!-- TABELA -->
+  <div class="overflow-hidden rounded-xl border border-slate-200">
+
+    <table class="w-full text-sm">
+
+      <thead class="bg-slate-100 text-slate-700 uppercase text-xs">
+        <tr>
+          <th class="p-4 text-center">Posição</th>
+          <th class="p-4 text-center">Participante</th>
+          <th class="p-4 text-center">Acertos</th>
+          <th class="p-4 text-center">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody id="participants_table" class="divide-y"></tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+<script src="src/lista.js"></script>
+
+</body>
+</html>
